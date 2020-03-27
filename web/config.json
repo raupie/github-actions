@@ -1,1 +1,5 @@
+<<<<<<< master
 {"API_ENDPOINT":"default","timestamp":""}
+=======
+{"API_ENDPOINT":"production"}
+>>>>>>> CI: Update .env file
