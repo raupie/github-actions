@@ -14,9 +14,9 @@ jobs:
         run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
         id: extract_branch
 
-      - name: Update .env file
+      - name: Update config.json
         if: github.ref == 'refs/heads/staging' || github.ref == 'refs/heads/production' 
-        run: sh ./scripts/update-endpoint.sh ${GITHUB_REF##*/}
+        run: sh ./scripts/update-config.sh ${GITHUB_REF##*/}
           
       - name: Commit files
         if: github.ref == 'refs/heads/staging' || github.ref == 'refs/heads/production'
