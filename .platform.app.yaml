@@ -1,0 +1,20 @@
+# This file describes an application. You can have multiple applications
+# in the same project.
+
+# The name of this app. Must be unique within a project.
+name: app
+
+# The type of the application to build.
+type: php:7.3
+build:
+    flavor: none
+
+# The size of the persistent disk of the application (in MB).
+disk: 2048
+
+# The configuration of app when it is exposed to the web.
+web:
+    locations:
+        "/":
+            root: 'web'
+            passthru: '/index.php'
